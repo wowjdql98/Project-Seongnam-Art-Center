@@ -5,6 +5,8 @@
 @import url('rental.css');
 
 
+
+
 /* 헤더와 푸터 백그라운드동영상 */
 /* 헤더 */
 #header {
@@ -31,7 +33,7 @@
 
 #header .container #header-gnb {
     position: absolute;
-    margin-top: 30px;
+    top: 0;
     margin-left: 531px;
 
     color: #fff;
@@ -49,8 +51,8 @@
 
 .gnb>li {
     width: 25%;
-    height: 70px;
-    line-height: 70px;
+    height: 100px;
+    line-height: 100px;
     position: relative;
 }
 
@@ -88,7 +90,7 @@
 #toggle-menu-btn {
     position: absolute;
     right: 33px;
-    top: 33px;
+    top: 28px;
 }
 
 .hamburger .line {
@@ -324,18 +326,9 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
 footer {
     width: 100%;
-    height: 245px;
+    height: 275px;
     background: #000;
     color: #fff;
     margin: 0 auto;
@@ -343,9 +336,8 @@ footer {
     font-family: "Noto Sans Korean", sans-serif;
     font-size: 14px;
     /*피그마와 같이주면 1000픽셀쯤부터 찌그러짐.*/
-    /*padding: 0 355px;*/
+    padding-top: 30px;
 }
-
 footer .logo {
     display: none;
 }
@@ -383,9 +375,6 @@ footer .copyright {
 }
 
 
-
-
-
 /* 모바일 레이아웃 */
 @media only screen and (max-width: 375px) {
 
@@ -395,6 +384,7 @@ footer .copyright {
     }
 
     #header .container {
+        width: 375px;
         position: relative;
     }
 
@@ -497,7 +487,7 @@ footer .copyright {
         width: calc(375px / 3);
         height: 44px;
         left: 0px;
-        top: 138px;
+        top: 137px;
         bottom: 0;
         border-top: 0.5px solid #111111;
         border-right: 0.5px solid #111111;
@@ -511,7 +501,7 @@ footer .copyright {
         width: calc(375px / 3);
         height: 44px;
         left: 125px;
-        top: 138px;
+        top: 137px;
         border-top: 0.5px solid #111111;
         border-right: 0.5px solid #111111;
         display: flex;
@@ -524,7 +514,7 @@ footer .copyright {
         width: calc(375px / 3);
         height: 44px;
         left: 250px;
-        top: 138px;
+        top: 137px;
         border-top: 0.5px solid #111111;
         display: flex;
         align-items: center;
@@ -714,6 +704,3 @@ footer .copyright {
         font-size: 10px;
     }
 }
-
-
-

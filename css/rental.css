@@ -1,20 +1,19 @@
+
 body {
 	font-family: 'Noto Sans KR', sans-serif;
 	color: #fff;
 	background-color: #000;
-}
-#rental {
 	margin-top: 100px;
-	position: relative;
 }
-#rental h1 {
+
+#rental-page .container > h1 {
 	font-weight: 700;
 	font-size: 40px;
 	position: absolute;
-	left: 180px;
+	/* left: 180px; */
+	margin-left: 180px;
 	top: 30px;
 }
-
 
 .container {
 	position: relative;
@@ -22,7 +21,12 @@ body {
 	margin: 0 auto;
 }
 
-#rental .page a {
+#rental-page {
+	/* z-index: 0; */
+	height: 1068px;
+}
+
+#rental-page .page a {
 	background: #D9D9D9;
 	color: #000;
 	border-radius: 10px;
@@ -57,7 +61,7 @@ body {
 	top: 108px;
 }
 
-#rental h2 {
+#rental-page h2 {
 	position: absolute;
 	left: 180px;
 	top: 198px;
@@ -81,17 +85,13 @@ body {
 	left: 742px;
 	top: 264px;
 }
-#rental-btn {
-	position: absolute;
-	text-align: center;
-	line-height: 50px;
 
-	left: 1150px;
-	top: 160px;
-}
-#rental .container>a {
+#rental-page .container>a {
+	position: absolute;
 	width: 180px;
 	height: 50px;
+	right: 178px;
+	top: 194px;
 	background: #D9D9D9;
 	color: #000;
 	border-radius: 10px;
