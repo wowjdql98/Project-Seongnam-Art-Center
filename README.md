@@ -5,8 +5,7 @@
 -----------------
 성남아트센터 홈페이지를 반응형웹으로 리뉴얼하였습니다.
 
-사이트 링크 : https://wb96choi.github.io/seongnam_team/
-
+사이트 링크 : https://wowjdql98.github.io/Project-Seongnam-Art-Center/
 
 -----------------
 ## 팀 공지사항
