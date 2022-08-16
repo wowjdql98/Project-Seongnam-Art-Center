@@ -75,11 +75,13 @@
 .gnb>li>.sub>li {
     height: 50px;
     line-height: 50px;
+    /* color: #000; */
 }
 
 .gnb>li>.sub>li:hover a {
     background-color: rgba(102, 102, 102, 0.5);
     /* color: var(--main-color); */
+    /* color: #000; */
 }
 
 .gnb>li>.sub>li>a {
@@ -337,6 +339,9 @@ footer {
     font-size: 14px;
     /*피그마와 같이주면 1000픽셀쯤부터 찌그러짐.*/
     padding-top: 30px;
+}
+footer #line {
+    border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
 }
 footer .logo {
     display: none;
@@ -636,6 +641,15 @@ footer .copyright {
         /*text-align: left;*/
         font-family: "Noto Sans Korean", sans-serif;
         font-size: 12px;
+    }
+    footer #line {
+        border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
+    }
+
+    footer #s-line {
+        border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
+        width: 330px;
+        margin: 0 auto;
     }
 
     footer .logo img {
