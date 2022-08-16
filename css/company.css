@@ -41,9 +41,9 @@
     height: 500px;
     /* outline: 1px solid #333; */
 }
-#company-section1 .container .com-col:first-child img{
+#company-section1 .container .com-col img{
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: block;
     object-fit: cover;
 } 
@@ -55,8 +55,9 @@
 #company-section1 .container .com-col:last-child{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
+
 #company-section1 .container .com-col .com-info{
     /* outline: 2px solid greenyellow; */
     padding: 20px;
@@ -68,12 +69,19 @@
     align-items: center;
     justify-content: center;
     padding-top: 10px;
+    line-height: 35px;
     /* outline: 1px solid red; */
 }
-#company-section1 .container .com-col .com-info p:last-child{
- padding-bottom: 20px;   
+#company-section1 .container .com-col .com-info p:first-child{
+    margin-top: 10px;
 }
-
+#company-section1 .container .com-col .com-info p:last-child{
+    padding-bottom: 20px;   
+}
+#company-section1 .container .col-img{
+    display: flex;
+    flex-direction: column;
+}
 
 /* company-section2-오시는길 */
 #company-section2{
@@ -102,7 +110,7 @@
     width: 100%;
 }
 #company-section2 .container .com-col .map{
-   /* outline: 2px solid darkcyan; */
+    /* outline: 2px solid darkcyan; */
     width: 100%;
     height: 510px; 
     display: block;
@@ -112,6 +120,7 @@
     margin-bottom: 30px;
     /* padding: 20px 20px 20px 0; */
 }
+
 /* 버스노선 */
 #company-section2 .container .com-col .bus-subway{
     width: 100%;
@@ -146,6 +155,7 @@
   font-weight: 400;
   margin-top: 20px;
 } 
+
 #company-section2 .container .com-col .bus-btn2{
     text-align: center;
     margin-top: 20px;
@@ -162,13 +172,15 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+
 #company-section2 .container .com-col .bi-train-front{
-    /* top: 50px; */
     bottom: 85px;
     position: absolute;
     font-size: 60px;
     display: block;
 }
+
 #company-section2 .container .com-col .subway-btn{
     flex-direction: column;
     text-align: center;
@@ -260,7 +272,7 @@
     }
     /* company-section2-오시는길 */
     #company-section2{
-        margin-top: 50px;
+        margin-top: 100px;
         margin-bottom: 60px;
     }
     #company-section2 .container{
@@ -281,7 +293,7 @@
     }
     /* 구글 api */
     #company-section2 .container .com-col .map{
-        margin-left: 10px;
+        /* margin-left: 10px; */
         width: 100%;
         height: 258px;
     }
