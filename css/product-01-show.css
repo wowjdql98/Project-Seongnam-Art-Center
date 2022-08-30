@@ -12,6 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin: 0 auto;
 }
 
 .h1h1 {
@@ -55,6 +57,7 @@
   0% {
     transform: translateX(2000px);
   }
+
   100% {
     transform: translateX(-2000px);
   }
@@ -196,7 +199,7 @@
 
 }
 
-.npBtn> a {
+.npBtn>a {
   width: 40px;
   height: 40px;
   color: #000;
@@ -205,19 +208,23 @@
   border-radius: 50%;
 }
 
-.p1, .n2 {
+.p1,
+.n2 {
   width: 100%;
   height: 100%;
 }
 
-.npBtn> a:first-child {
+.npBtn>a:first-child {
   margin-right: 20px;
 }
 
-.npBtn> a:last-child {
+.npBtn>a:last-child {
   margin-left: 20px;
 }
 
+footer #line {
+  border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
+}
 
 
 
@@ -256,6 +263,7 @@
     0% {
       transform: translateX(390px);
     }
+
     100% {
       transform: translateX(-390px);
     }
@@ -397,34 +405,40 @@
 
 
   /* 이전 - 다음 항목 버튼 */
-.npBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .npBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 
-}
+  }
 
-.npBtn> a {
-  color: #000;
-  background-color: #fff;
-  border-radius: 50%;
+  .npBtn>a {
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
 
-  padding: 10px 4.8%;
-}
+    padding: 10px 4.8%;
+  }
 
-.npBtn> a:first-child {
-  margin-right: 20px;
-}
+  .npBtn>a:first-child {
+    margin-right: 20px;
+  }
 
-.npBtn> a:last-child {
-  margin-left: 20px;
-}
+  .npBtn>a:last-child {
+    margin-left: 20px;
+  }
 
-.npBtn> a:hover {
-  background-color: rgb(119, 201, 255);
-  color: #ecf0f1;
-}
+  .npBtn>a:hover {
+    background-color: rgb(119, 201, 255);
+    color: #ecf0f1;
+  }
+
+  footer #s-line {
+    border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
+    width: 330px;
+    margin: 0 auto;
+  }
 
 }

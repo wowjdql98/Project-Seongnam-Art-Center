@@ -3,12 +3,55 @@
 @import url('background-youtube.css');
 @import url('company.css');
 @import url('rental.css');
+@import url('product-01-show.css');
+@import url('product-detail.css');
+@import url('product-detailS.css');
 
 
+#login-btn {
+    cursor: pointer;
+    background-color: var(--main-color);
+    border-style: none;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+.login-sns > button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.login-sns > button:hover {
+    background-color: #ccc;
+}
 
 
-/* 헤더와 푸터 백그라운드동영상 */
-/* 헤더 */
+/* 모바일 레이아웃 */
+@media only screen and (max-width: 375px) {
+
+   .container {
+        width: 375px;
+        margin: 0 auto;
+   }
+
+   #login-btn {
+    cursor: pointer;
+    background-color: var(--main-color);
+    border-style: none;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+}
+#login-btn > img {
+    width: 35px;
+}
+
+}
+
 #header {
     width: 100%;
     position: fixed;
@@ -75,13 +118,11 @@
 .gnb>li>.sub>li {
     height: 50px;
     line-height: 50px;
-    /* color: #000; */
 }
 
 .gnb>li>.sub>li:hover a {
     background-color: rgba(102, 102, 102, 0.5);
     /* color: var(--main-color); */
-    /* color: #000; */
 }
 
 .gnb>li>.sub>li>a {
@@ -90,15 +131,17 @@
 
 /* 헤더 토글버튼 */
 #toggle-menu-btn {
-    position: absolute;
+    position: fixed;
     right: 33px;
     top: 28px;
+    z-index: 10;
 }
 
 .hamburger .line {
     width: 50px;
     height: 5px;
-    background-color: #ecf0f1;
+    /* background-color: #ecf0f1; */
+    background-color: #fff;
     display: block;
     margin: 8px auto;
     -webkit-transition: all 0.3s ease-in-out;
@@ -140,22 +183,21 @@ body {
     right: 0;
     top: 0;
     padding-top: var(--header-height);
-    width: 600px;
-    height: calc(100vh);
-    background-color: #fff;
-    /* 많이축소하면 보임 ㅎㅎ.. */
-    transform: translateX(200%);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
     transition: .5s;
     z-index: 9;
-
+    transform: scale(0%);
+    transform-origin: 100% 0 0;
 }
 
 #toggle-menu.on {
     position: fixed;
-    overflow: scroll;
+    /* overflow: scroll; */
     display: block;
     transition: .5s;
-    transform: translateX(0);
+    transform: scale(100%);
     /* box-shadow: rgba(0, 0, 0, 0.7) 0 0 0 99999px; */
 }
 
@@ -227,16 +269,17 @@ body {
 }
 
 #toggle-menu .login-section {
-    position: relative;
-    width: 560px;
+    position: absolute;;
+    width: 540px;
     height: 300px;
-    margin-top: 9px;
-    margin: 9px auto;
+    right: 200px;
+    top: 50%;
     border: .5px solid #333;
     /* padding 상 우 하 좌 */
     padding: 50px 105px 20px 105px;
     color: #000;
     font-size: 14px;
+    background-color: #fff;
 }
 
 #toggle-menu .login-section .login-box input {
@@ -269,63 +312,73 @@ body {
 
 /* 토글메뉴의 메뉴 */
 #toggle-menu #toggle-gnb {
-    color: #000;
-    background-color: #fff;
-    width: 560px;
-    font-size: 24px;
-    margin: 30px auto;
-    text-align: center;
+    color: #fff;
+    /* position: absolute; */
+    top: 109px;
+    left: 200px;
+    display: flex;
+    justify-content: center;
+    /* width: 1440px; */
+    margin: 0 auto;
+}
+#toggle-gnb > li{
+    font-size: 26px;
+    font-weight: 500;
+    margin-right: 130px;
+}
+#toggle-gnb > li:last-child {
+    margin-right: 0;
+}
+#toggle-gnb > li > a {
+    width: 100%;
+    display: block;
+}
+#toggle-gnb > li > a:hover  {
+    border-bottom: 1px solid #fff;
 }
 
-#toggle-gnb>li {
-    width: 100%;
-    border-bottom: 1px solid black;
-    position: relative;
+
+#toggle-gnb > li > .sub {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 400;
 }
+#toggle-gnb > li > .sub > li{
+    /* height: 20px; */
+    line-height: 40px;
+}
+#toggle-gnb > li > .sub > li > a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+
 
 #toggle-gnb>li .gnb-plus {
     display: none;
+}
+
+#toggle-menu .welcome {
     position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-#toggle-gnb>li>a {
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
-    display: block;
-}
-
-#toggle-gnb>li>a:hover {
-    background-color: #eaeaea;
-}
-
-#toggle-gnb>li>.sub {
-    width: 100%;
-    background-color: #eaeaea;
-
-    display: none;
-}
-
-#toggle-gnb>li>.sub>li {
-    margin: 0 auto;
-    width: 90%;
-    height: 80px;
-    line-height: 80px;
-    border-bottom: 1px solid black;
-}
-
-#toggle-gnb>li>.sub>li>a {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-#toggle-gnb>li>.sub>li>a {
-    background-color: #eaeaea;
+    width: 540px;
+    height: 300px;
+    left: 103px;
+    top: 50%;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 140px;
 }
+#toggle-menu .welcome h1 {
+    font-size: 50px;
+}
+#toggle-menu .welcome h2 {
+    font-size: 60px;
+}
+
+
+
+
 
 
 footer {
@@ -340,9 +393,7 @@ footer {
     /*피그마와 같이주면 1000픽셀쯤부터 찌그러짐.*/
     padding-top: 30px;
 }
-footer #line {
-    border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
-}
+
 footer .logo {
     display: none;
 }
@@ -431,6 +482,53 @@ footer .copyright {
         transform: translateY(-10px) rotate(-45deg);
     }
 
+    /* 헤더 */
+    #header {
+        height: var(--header-height-m);
+    }
+
+    #header .container {
+        position: relative;
+    }
+
+    #header .container .logo {
+        position: absolute;
+    }
+
+    #header .container .logo img {
+        width: 68px;
+    }
+
+    #header-gnb {
+        display: none;
+    }
+
+    /* 헤더 토글버튼 */
+    #toggle-menu-btn {
+        position: fixed;
+        right: 23px;
+        top: 15px;
+    }
+
+    .hamburger .line {
+        width: 24px;
+        height: 2px;
+    }
+
+    .hamburger.active .line:nth-child(1) {
+        -webkit-transform: translateY(10px) rotate(45deg);
+        -ms-transform: translateY(10px) rotate(45deg);
+        -o-transform: translateY(10px) rotate(45deg);
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .line:nth-child(3) {
+        -webkit-transform: translateY(-10px) rotate(-45deg);
+        -ms-transform: translateY(-10px) rotate(-45deg);
+        -o-transform: translateY(-10px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
     /* 헤더 토글메뉴 */
     body {
         width: 100vw;
@@ -455,6 +553,7 @@ footer .copyright {
         transform: translatey(0);
         /* box-shadow: rgba(0, 0, 0, 0.7) 0 0 0 99999px; */
     }
+
 
     /* 토글메뉴 로그인섹션 */
     .hidden {
@@ -526,7 +625,6 @@ footer .copyright {
         justify-content: center;
     }
 
-    /* 토글메뉴 로그인섹션 */
     #toggle-menu .login-section {
         position: relative;
         width: 100%;
@@ -627,9 +725,6 @@ footer .copyright {
 
 
 
-
-
-
     /* 푸터 */
     footer {
         width: 100%;
@@ -637,19 +732,11 @@ footer .copyright {
         background: #000;
         color: #fff;
         margin: 0 auto;
-        padding: 20px;
+        /* padding: 20px; */
+        padding-top: 20%;
         /*text-align: left;*/
         font-family: "Noto Sans Korean", sans-serif;
         font-size: 12px;
-    }
-    footer #line {
-        border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
-    }
-
-    footer #s-line {
-        border-bottom: 0.3px solid rgba(255, 255, 255, 0.5);
-        width: 330px;
-        margin: 0 auto;
     }
 
     footer .logo img {

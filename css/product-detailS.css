@@ -426,7 +426,7 @@ i[class^=icon-chevron] {
 
   position: absolute;
   right: 30px;
-  top: 200vh;
+  top: 100vh;
   cursor: pointer;
 
   background-color: #000;
@@ -857,7 +857,7 @@ footer #line {
 
     position: absolute;
     right: 30px;
-    top: 1280px;
+    top: 580px;
     cursor: pointer;
   }
 
