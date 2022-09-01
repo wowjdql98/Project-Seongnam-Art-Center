@@ -65,7 +65,7 @@
 
 
 
-## 사용 언어
-|JavaScript|HTML5|CSS|
+## 사용 플로그인
+|swiper|
 |---|---|---|
 
